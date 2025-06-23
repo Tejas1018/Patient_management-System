@@ -17,10 +17,10 @@ public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private UUID id;
 
     @NotNull
+    @Column(name ="patient_name")
     private String patientName;
 
     @NotNull
@@ -34,4 +34,3 @@ public class Patient {
     private LocalDate registrationDate;
     private String address;
 }
-

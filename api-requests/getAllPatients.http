@@ -3,4 +3,4 @@ GET https://examples.http-client.intellij.net/get
     ?generated-in=IntelliJ IDEA
 
 ###
-GET localhost:9000/getAllPatients
+http://localhost:4000/patients/allPatients
