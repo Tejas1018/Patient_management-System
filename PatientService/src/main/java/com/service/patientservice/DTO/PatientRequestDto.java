@@ -5,10 +5,10 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class PatientResponseDto {
-    private String id;
+public class PatientRequestDto {
     private String patientName;
     private String email;
     private String dateOfBirth;
     private String address;
+
 }

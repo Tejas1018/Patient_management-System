@@ -1,5 +1,6 @@
 package com.service.patientservice.Service;
 
+import com.service.patientservice.DTO.PatientRequestDto;
 import com.service.patientservice.DTO.PatientResponseDto;
 import com.service.patientservice.Mapper.PatientMapper;
 import com.service.patientservice.Repository.PatientRepository;
@@ -20,7 +21,14 @@ public class PatientService {
         List<Patient> patients = patientRepository.findAll();
 
         return patients.stream().
-                map(PatientMapper::mapToPatientResponseDto)
+                map(PatientMapper::toDTO)
                 .toList();
+    }
+
+    public PatientResponseDto createPatient(PatientRequestDto patientRequestDto) {
+        Patient patient = PatientMapper.toPatient(patientRequestDto);
+        patient.setRegistrationDate(java.time.LocalDate.now());
+        Patient savedPatient = patientRepository.save(patient);
+        return PatientMapper.toDTO(savedPatient);
     }
 }

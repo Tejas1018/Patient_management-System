@@ -3,34 +3,31 @@ package com.service.patientservice.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.antlr.v4.runtime.misc.NotNull;
-
-import java.text.DateFormat;
+import org.hibernate.annotations.GenericGenerator;
 import java.time.LocalDate;
-import java.util.Locale;
-import java.util.UUID;
 
 @Entity
 @Setter
 @Getter
 public class Patient {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "VARCHAR(36)")
+    private String id;
 
-    @NotNull
-    @Column(name ="patient_name")
+
     private String patientName;
 
-    @NotNull
-    @Column(unique = true)
-    private String Email;
 
-    @NotNull
+    @Column(unique = true)
+    private String email;
+
+
     private LocalDate dateOfBirth;
 
-    @NotNull
+
     private LocalDate registrationDate;
+
     private String address;
 }
