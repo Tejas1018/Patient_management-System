@@ -1,0 +1,14 @@
+### GET request to example server
+###
+### Update Patient
+### PUT request to update patient information
+
+PUT http://localhost:4000/patients/updatePatient/89a90872-8e2b-4b37-abd1-bb95d6a64f6c
+Content-Type: application/json
+
+{
+  "patientName": "Sarath Chandra",
+
+  "dateOfBirth": "2003-06-26",
+  "address": "Andhra Pradesh, India"
+}

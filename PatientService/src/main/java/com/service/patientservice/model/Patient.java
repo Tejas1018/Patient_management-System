@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Setter
@@ -13,8 +14,8 @@ public class Patient {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "VARCHAR(36)")
-    private String id;
+    @Column(name = "id", columnDefinition = "BINARY(16)")
+    private UUID id;
 
 
     private String patientName;
