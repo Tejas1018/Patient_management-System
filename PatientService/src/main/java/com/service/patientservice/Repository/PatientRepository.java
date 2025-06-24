@@ -13,4 +13,6 @@ import java.util.UUID;
 public interface PatientRepository extends JpaRepository<Patient, UUID> {
     List<Patient> findAll();
     PatientRequestDto save(PatientRequestDto patientRequestDto);
+    boolean existsByEmail(String email);
+
 }

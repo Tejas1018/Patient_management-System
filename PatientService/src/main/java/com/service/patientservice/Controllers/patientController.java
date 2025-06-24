@@ -30,4 +30,5 @@ public class patientController {
         PatientResponseDto createdPatient = patientService.createPatient(patientRequestDto);
         return new ResponseEntity<>(createdPatient, HttpStatus.CREATED);
     }
+
 }
