@@ -9,11 +9,13 @@ Add the following to the <dependencies> section
     <artifactId>grpc-netty-shaded</artifactId>
     <version>1.69.0</version>
 </dependency>
+
 <dependency>
     <groupId>io.grpc</groupId>
     <artifactId>grpc-protobuf</artifactId>
     <version>1.69.0</version>
 </dependency>
+
 <dependency>
     <groupId>io.grpc</groupId>
     <artifactId>grpc-stub</artifactId>
@@ -25,11 +27,13 @@ Add the following to the <dependencies> section
     <version>6.0.53</version>
     <scope>provided</scope>
 </dependency>
+
 <dependency>
     <groupId>net.devh</groupId>
     <artifactId>grpc-spring-boot-starter</artifactId>
     <version>3.1.0.RELEASE</version>
 </dependency>
+
 <dependency>
     <groupId>com.google.protobuf</groupId>
     <artifactId>protobuf-java</artifactId>
