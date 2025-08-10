@@ -1,21 +1,20 @@
-Billing Service 
 
-gRPC  setup :
-Add the following to the <dependencies> section
+# Billing Service
 
-<!--GRPC -->
+## gRPC :
+ Add following dependencies in `pom.xml` file
+
+```<!--GRPC -->
 <dependency>
     <groupId>io.grpc</groupId>
     <artifactId>grpc-netty-shaded</artifactId>
     <version>1.69.0</version>
 </dependency>
-
 <dependency>
     <groupId>io.grpc</groupId>
     <artifactId>grpc-protobuf</artifactId>
     <version>1.69.0</version>
 </dependency>
-
 <dependency>
     <groupId>io.grpc</groupId>
     <artifactId>grpc-stub</artifactId>
@@ -27,21 +26,23 @@ Add the following to the <dependencies> section
     <version>6.0.53</version>
     <scope>provided</scope>
 </dependency>
-
 <dependency>
     <groupId>net.devh</groupId>
     <artifactId>grpc-spring-boot-starter</artifactId>
     <version>3.1.0.RELEASE</version>
 </dependency>
-
 <dependency>
     <groupId>com.google.protobuf</groupId>
     <artifactId>protobuf-java</artifactId>
     <version>4.29.1</version>
 </dependency>
 
-Replace the <build> section with the following
+```
 
+
+Replace the < build > section with the following
+
+``` 
 <build>
     <extensions>
         <!-- Ensure OS compatibility for protoc -->
@@ -79,3 +80,6 @@ Replace the <build> section with the following
         </plugin>
     </plugins>
 </build>
+```
+
+
